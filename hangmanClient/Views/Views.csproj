@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE53B4D7-E7A5-4ED8-B6E2-5C8BBE4911B4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Views</RootNamespace>
+    <AssemblyName>Views</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Connected Services\SRIPlayerManagement\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ButtonAnimation.cs" />
+    <Compile Include="Utils\SoundManager.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\Challenging Waiting Room.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ChangeLanguage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CreateProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ErrorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\loser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageAccessCode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageAnimalCategory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageCategories.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SuccessPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Waiting room fortune teller.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\warningPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\winning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pages\Challenging Waiting Room.xaml.cs">
+      <DependentUpon>Challenging Waiting Room.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChangeLanguage.xaml.cs">
+      <DependentUpon>ChangeLanguage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CreateProfile.xaml.cs">
+      <DependentUpon>CreateProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ErrorPage.xaml.cs">
+      <DependentUpon>ErrorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\loser.xaml.cs">
+      <DependentUpon>loser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageAccessCode.xaml.cs">
+      <DependentUpon>PageAccessCode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageAnimalCategory.xaml.cs">
+      <DependentUpon>PageAnimalCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageCategories.xaml.cs">
+      <DependentUpon>PageCategories.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SuccessPage.xaml.cs">
+      <DependentUpon>SuccessPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Waiting room fortune teller.xaml.cs">
+      <DependentUpon>Waiting room fortune teller.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\warningPage.xaml.cs">
+      <DependentUpon>warningPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\winning.xaml.cs">
+      <DependentUpon>winning.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources-en.Designer.cs">
+      <DependentUpon>Resources-en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources-en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources-en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Fonts\VT323-Regular.ttf" />
+    <Resource Include="Fonts\PressStart2P-Regular.ttf" />
+    <Resource Include="Fonts\Retro Gaming.ttf" />
+    <None Include="Connected Services\SRIPlayerManagement\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRIPlayerManagement\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRIPlayerManagement\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRIPlayerManagement\ServicesExposed.wsdl" />
+    <None Include="Connected Services\SRIPlayerManagement\Views.SRIPlayerManagement.DTOPlayer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{a6d440d8-0c9f-479c-aa3b-9be4ef84672b}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logs\Logs.csproj">
+      <Project>{bc854560-c7b3-4406-8620-8b0c221ab139}</Project>
+      <Name>Logs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Label-login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\orange-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\title-home-English.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\title-home-Spanish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background-Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background-register-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\green-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pink-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\long-orange-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pen.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\trash-can-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\EU-Flag-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\dashboard-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\menu-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Challenging-Waiting-Room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\game-flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\long-purple-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background-Access-Code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\txtAccess-code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\fungus-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background-Categories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\flute-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background-Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background-success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background-warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\World.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Purple-Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mexico-flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background-winning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\dark-orange-button.png" />
+    <None Include="Connected Services\SRIPlayerManagement\item.disco" />
+    <None Include="Connected Services\SRIPlayerManagement\configuration91.svcinfo" />
+    <None Include="Connected Services\SRIPlayerManagement\configuration.svcinfo" />
+    <None Include="Connected Services\SRIPlayerManagement\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Resource Include="Images\Background-home.png" />
+    <Resource Include="Images\error-label.png" />
+    <Resource Include="Image1.png" />
+    <Resource Include="Images\menu.png" />
+    <Resource Include="Images\exit.png" />
+    <Content Include="Music\button-sound.mp3" />
+    <Resource Include="Images\note.png" />
+    <Resource Include="Images\musical note.png" />
+    <Resource Include="Images\headphones2.png" />
+    <Resource Include="Images\headphones1.jpg" />
+    <Content Include="Music\retro-videogame.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SRIPlayerManagement\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
